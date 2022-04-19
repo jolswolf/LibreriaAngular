@@ -1,0 +1,6 @@
+<br>
+<span>Numero de medicos: {{medicos}}</span>
+<br>
+<select [(ngModel)]="hospitalElegido" (change)="enCambio()">
+    <option *ngFor="let hospital of hospitales" value={{hospital.idHospital}}>{{hospital.nombre}}</option>
+</select>

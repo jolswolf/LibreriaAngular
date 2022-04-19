@@ -1,0 +1,25 @@
+<table class="table">
+    <thead>
+        
+        <th>Id</th>
+        <th>Nombre</th>
+        <th>Direccion</th>
+        <th>Camas Disponibles</th>
+
+    </thead>
+    <tbody>
+        <ng-container *ngFor="let hospital of hospitales">
+        <tr> 
+            
+            <td>{{hospital.idHospital}}</td>
+            <td>{{hospital.nombre}}</td>
+            <td>{{hospital.direccion}}</td>
+            <td>{{hospital.numCamas}}</td>
+            
+        </tr>
+        </ng-container>
+        <tr *ngIf="!hospitales || hospitales.length==0">
+            <td colspan="4"> No hay hospitales </td>
+        </tr>
+    </tbody>
+</table>
